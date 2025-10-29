@@ -5,7 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-@Controller
+//@Controller
 public class BookListController {
 
     private final BookService bookService;
@@ -20,3 +20,4 @@ public class BookListController {
         return "listBooks"; // ова ќе го бара во templates/listBooks.html
     }
 }
+
