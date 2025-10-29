@@ -47,6 +47,17 @@
              and the displayed text should be:
              Title: <book_title>, Genre: <book_genre>, Rating: <average_rating> -->
 
+        <form th:action=" @{ /model/bookReservation }" method="post">
+            <div th:each="book : ${books} " class="book-option">
+                <label>
+                    <input type="radio" name="bookTitle" th:value="${book.getTitle()}" required>
+                    <span th:text="${book.getTitle()} + ' | ' + ${book.getGenre()} + ' | ' +  ${book.getAverageRating()}"></span>
+                </label>
+            </div>
+
+            <button type="submit">Reserve</button>
+        </form>
+
         <h2>Enter your information:</h2>
         <label>Your Name:</label>
         <input type="text" name="readerName" required><br/>
