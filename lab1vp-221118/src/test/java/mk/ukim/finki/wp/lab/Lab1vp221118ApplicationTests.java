@@ -1,13 +1,15 @@
 package mk.ukim.finki.wp.lab;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.ServletComponentScan;
 
-@SpringBootTest
-class Lab1vp221118ApplicationTests {
+@SpringBootApplication
+@ServletComponentScan
+public class Lab1vp221118Application {
 
-    @Test
-    void contextLoads() {
+    public static void main(String[] args) {
+        SpringApplication.run(Lab1vp221118Application.class, args);
     }
 
 }
